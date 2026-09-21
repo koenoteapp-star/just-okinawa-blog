@@ -1,0 +1,281 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const [hero, ...rest] = posts;
+const secondary = rest.slice(0, 2);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+		<!-- HERO: Full-bleed featured post -->
+		{hero && (
+			<div class="hp-hero">
+				{hero.data.heroImage && (
+					<Image
+						src={hero.data.heroImage}
+						alt={hero.data.title}
+						width={1600}
+						height={900}
+						class="hp-hero__img"
+					/>
+				)}
+				<div class="hp-hero__overlay">
+					<span class="hp-tag">Beaches &amp; Nature</span>
+					<h1 class="hp-hero__title">{hero.data.title}</h1>
+					<p class="hp-hero__desc">{hero.data.description}</p>
+					<a href={`/blog/${hero.id}/`} class="hp-hero__btn">Read more →</a>
+				</div>
+			</div>
+		)}
+
+		<!-- SECONDARY: 2 cards side by side -->
+		<div class="hp-grid">
+			{secondary.map((post, i) => (
+				<div class="hp-card">
+					{post.data.heroImage && (
+						<Image
+							src={post.data.heroImage}
+							alt={post.data.title}
+							width={800}
+							height={500}
+							class="hp-card__img"
+						/>
+					)}
+					<div class="hp-card__overlay">
+						<span class="hp-tag">{i === 0 ? 'Culture' : 'Food'}</span>
+						<h2 class="hp-card__title">{post.data.title}</h2>
+						<a href={`/blog/${post.id}/`} class="hp-card__link">Read →</a>
+					</div>
+				</div>
+			))}
+		</div>
+
+		<!-- CATEGORY STRIP -->
+		<div class="hp-cats">
+			<a href="/blog" class="hp-cat" style="background: linear-gradient(135deg,#0077a8,#48cae4)">
+				<span class="hp-cat__icon">🌊</span>
+				<span class="hp-cat__label">Beaches</span>
+			</a>
+			<a href="/blog" class="hp-cat" style="background: linear-gradient(135deg,#c45c00,#f4a535)">
+				<span class="hp-cat__icon">🍜</span>
+				<span class="hp-cat__label">Food</span>
+			</a>
+			<a href="/blog" class="hp-cat" style="background: linear-gradient(135deg,#4a1a6b,#9b5de5)">
+				<span class="hp-cat__icon">🥁</span>
+				<span class="hp-cat__label">Culture</span>
+			</a>
+		</div>
+
+		<!-- TAGLINE -->
+		<div class="hp-tagline">
+			<p class="hp-tagline__text">Okinawa isn't Japan.<br/>Most visitors never figure that out.</p>
+			<a href="/blog" class="hp-tagline__btn">All guides →</a>
+		</div>
+
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	/* ── HERO ── */
+	.hp-hero {
+		display: grid;
+		width: 100%;
+		height: 90vh;
+		min-height: 480px;
+		overflow: hidden;
+	}
+	.hp-hero > * {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.hp-hero__img {
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: cover;
+		border-radius: 0 !important;
+		transition: transform 0.6s ease;
+		display: block;
+	}
+	.hp-hero:hover .hp-hero__img {
+		transform: scale(1.03);
+	}
+	.hp-hero__overlay {
+		background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.15) 50%, transparent 100%);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 3.5rem 4rem;
+		z-index: 1;
+	}
+	.hp-hero__title {
+		font-size: clamp(1.8rem, 4vw, 3.2rem);
+		color: white !important;
+		margin: 0.4em 0 0.5em;
+		line-height: 1.15;
+		max-width: 720px;
+	}
+	.hp-hero__desc {
+		font-size: 1rem;
+		color: rgba(255,255,255,0.85);
+		max-width: 560px;
+		margin: 0 0 1.5em;
+		line-height: 1.6;
+	}
+	.hp-hero__btn {
+		display: inline-block;
+		background: white;
+		color: #0077a8 !important;
+		padding: 0.65em 1.6em;
+		border-radius: 50px;
+		font-weight: 700;
+		text-decoration: none !important;
+		font-size: 0.95rem;
+		width: fit-content;
+		transition: transform 0.2s;
+	}
+	.hp-hero__btn:hover { transform: translateY(-2px); }
+
+	/* ── TAG pill ── */
+	.hp-tag {
+		display: inline-block;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		background: #00b4d8;
+		color: white;
+		padding: 0.3em 0.8em;
+		border-radius: 50px;
+		width: fit-content;
+		margin-bottom: 0.5em;
+	}
+
+	/* ── SECONDARY GRID ── */
+	.hp-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4px;
+	}
+	.hp-card {
+		display: grid;
+		height: 50vw;
+		max-height: 500px;
+		overflow: hidden;
+	}
+	.hp-card > * {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.hp-card__img {
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: cover;
+		border-radius: 0 !important;
+		transition: transform 0.5s ease;
+		display: block;
+	}
+	.hp-card:hover .hp-card__img { transform: scale(1.04); }
+	.hp-card__overlay {
+		background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, transparent 55%);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 2rem 2.5rem;
+		z-index: 1;
+	}
+	.hp-card__title {
+		font-size: clamp(1rem, 2vw, 1.6rem);
+		color: white !important;
+		margin: 0.3em 0 0.6em;
+		line-height: 1.2;
+	}
+	.hp-card__link {
+		color: rgba(255,255,255,0.8) !important;
+		text-decoration: none !important;
+		font-size: 0.85rem;
+		font-weight: 700;
+	}
+	.hp-card__link:hover { color: white !important; }
+
+	/* ── CATEGORY STRIP ── */
+	.hp-cats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 4px;
+		margin-top: 4px;
+	}
+	.hp-cat {
+		position: relative;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none !important;
+		overflow: hidden;
+		transition: filter 0.3s;
+	}
+	.hp-cat:hover { filter: brightness(1.1); }
+	.hp-cat__icon { font-size: 2.4rem; margin-bottom: 0.3em; }
+	.hp-cat__label {
+		color: white;
+		font-weight: 700;
+		font-size: 1.1rem;
+		letter-spacing: 0.06em;
+	}
+
+	/* ── TAGLINE ── */
+	.hp-tagline {
+		text-align: center;
+		padding: 5em 1em;
+		background: #fafafa;
+	}
+	.hp-tagline__text {
+		font-size: clamp(2.4rem, 6vw, 5.5rem);
+		font-weight: 900;
+		line-height: 1.05;
+		color: rgb(15,18,25);
+		margin: 0 0 1em;
+		letter-spacing: -0.03em;
+	}
+	.hp-tagline__btn {
+		display: inline-block;
+		border: 2px solid #0077a8;
+		color: #0077a8 !important;
+		padding: 0.7em 2em;
+		border-radius: 50px;
+		font-weight: 700;
+		text-decoration: none !important;
+		font-size: 1rem;
+		transition: background 0.2s, color 0.2s;
+	}
+	.hp-tagline__btn:hover {
+		background: #0077a8;
+		color: white !important;
+	}
+
+	/* ── Mobile ── */
+	@media (max-width: 640px) {
+		.hp-hero { height: 75vw; min-height: 280px; }
+		.hp-hero__overlay { padding: 1.5rem; }
+		.hp-grid { grid-template-columns: 1fr; }
+		.hp-card { height: 70vw; max-height: 360px; }
+		.hp-cats { grid-template-columns: 1fr; }
+		.hp-cat { height: 130px; }
+	}
+</style>
