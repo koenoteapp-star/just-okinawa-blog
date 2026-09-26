@@ -18,7 +18,7 @@ These hotels exist. They're fine. They're also not what we're talking about.
 
 ## The Other Kind of Hotel
 
-The place in our OKI-004 video sits on the west coast of the main island. It has an ocean view — a real one, not the kind you have to crane your neck to see from a corner room on the fourth floor.
+The place in our OKI-004 video sits on Ishigaki Island. It has an ocean view — a real one, not the kind you have to crane your neck to see from a corner room on the fourth floor.
 
 What it doesn't have:
 
@@ -71,20 +71,20 @@ Most travel content from Okinawa is shot on the beach, facing outward. There's a
 
 We're not listing this specific property here — partly because places like this tend to change when they get too much attention, and partly because the right hotel depends on what you're actually looking for.
 
-What we can say: the west coast of the main island, between Yomitan and Onna, has the best combination of ocean views and small-scale accommodation. Search for guesthouses and small hotels in this area rather than the large resorts. The properties you want aren't the ones that show up first in the search results.
+What we can say: Ishigaki Island has a handful of hotels that get the ocean view right — not the massive resort chains, but the smaller properties where the view is the whole point. Search for boutique hotels and guesthouses on Ishigaki rather than the large resorts. The properties you want aren't the ones that show up first in the search results.
 
 **Search Okinawa accommodation:** [Booking.com Okinawa](https://www.booking.com/region/jp/okinawa.html)
 
 ---
 
-## Things to Do Near the West Coast
+## Things to Do on Ishigaki
 
-If you're basing yourself on the west coast and you're not there to swim, there's still plenty to do:
+If you're basing yourself on Ishigaki and you're not there just to swim, there's still plenty to do:
 
-- **Sunset watching** — the west coast faces the East China Sea, which means the sunsets are some of the best on the island (see our OKI-002 video)
-- **Ryukyuan culture sites** — several significant *utaki* and historical sites within 30 minutes of Onna
-- **Local food** — the smaller towns along the coast have restaurants that don't appear on any English-language review site
-- **Driving** — Route 58 runs along the entire west coast and is one of the most scenic drives in Japan
+- **Sunset watching** — Ishigaki's west-facing shores have some of the best sunsets in all of Okinawa
+- **Kabira Bay** — the most photographed bay in Okinawa, worth seeing in the early morning before the tour boats arrive
+- **Local food** — Ishigaki beef, fresh seafood, and local restaurants that don't appear on any English-language review site
+- **Island hopping** — Taketomi, Kohama, and Iriomote are all a short ferry ride away
 
 **Browse Okinawa experiences:** [Viator Okinawa](https://www.viator.com/ja-JP/Okinawa/d5614-ttd?localeSwitch=1)
 
