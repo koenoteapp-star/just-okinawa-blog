@@ -2,7 +2,7 @@
 title: "The Hotel in Okinawa With an Ocean View That Nobody Talks About"
 description: "No crowds. No noise. Just coffee and that view. This is the kind of place most visitors to Okinawa never find — and that's exactly why it's worth finding."
 pubDate: 2026-09-25
-heroImage: ../../assets/beach2.jpg
+heroImage: ../../assets/oki004_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"
   viator: "https://www.viator.com/ja-JP/Okinawa/d5614-ttd?localeSwitch=1"
@@ -27,6 +27,8 @@ What it doesn't have:
 
 What it does have is quiet. The kind of quiet that feels earned.
 
+![No crowds. No noise. Just this view.](../../assets/oki004_scene_3s.jpg)
+
 We filmed this in January, which is part of why it looks the way it does. January in Okinawa is off-season. The water is still blue. The light is still good. The average temperature sits around 17°C — cool enough to need a layer in the morning, warm enough to sit outside by noon.
 
 And the hotels are genuinely empty.
@@ -46,6 +48,8 @@ January is different.
 
 The trade-off is the ocean temperature. You won't be swimming. But if you're coming to Okinawa to look at it — and a lot of people are — January is arguably the best month to do that.
 
+![January in Okinawa — the light is different](../../assets/oki004_scene_10s.jpg)
+
 ---
 
 ## The View From the Window
@@ -55,6 +59,10 @@ The shot we kept coming back to while editing OKI-004 was the one through the wi
 It's a specific feeling. Being inside somewhere warm and quiet while that much water sits outside. Not urgent. Not Instagram-optimized. Just present.
 
 Most travel content from Okinawa is shot on the beach, facing outward. There's a version of it that's worth exploring from the inside, looking out.
+
+![Just coffee and that view](../../assets/oki004_scene_17s.jpg)
+
+![Most visitors never find places like this](../../assets/oki004_scene_24s.jpg)
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Beyond Ishigaki Island: The Place Most Maps Don't Show"
 description: "You take a ferry to Ishigaki. Then another boat. Then a water buffalo pulls you across the sea. This is the Okinawa that foreign tourists never reach."
 pubDate: 2026-09-24
-heroImage: ../../assets/beach.jpg
+heroImage: ../../assets/oki001_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"
   viator: "https://www.viator.com/Okinawa/d4449-ttd"

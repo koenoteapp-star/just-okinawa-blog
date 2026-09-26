@@ -2,7 +2,7 @@
 title: "The Okinawa Beach That Has No Name on Google Maps"
 description: "Most visitors spend their entire trip at Naha's tourist beaches. 20 minutes north, there's a cove with white sand and zero crowds — and no one talks about it."
 pubDate: 2026-09-24
-heroImage: ../../assets/beach.jpg
+heroImage: ../../assets/oki009_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"
   viator: "https://www.viator.com/Okinawa/d4449-ttd"

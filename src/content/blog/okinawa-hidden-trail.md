@@ -2,7 +2,7 @@
 title: "The Trail in Okinawa That Most Maps Don't Show"
 description: "An hour from Naha, there's a forest trail that leads to a five-hundred-year-old shrine. No crowds, no phone signal, no directions on Google Maps. Here's how to find it."
 pubDate: 2026-09-25
-heroImage: ../../assets/beach2.jpg
+heroImage: ../../assets/oki003_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"
   viator: "https://www.viator.com/ja-JP/Okinawa/d5614-ttd?localeSwitch=1"
@@ -29,6 +29,8 @@ What's there instead:
 
 Locals come here. The kind of locals who don't talk much about it.
 
+![Ancient trees. No phone signal. Complete silence.](../../assets/oki003_scene_5s.jpg)
+
 ---
 
 ## What Makes It Different
@@ -43,6 +45,8 @@ Then it shifts.
 
 The trees get older. The canopy closes. The light changes from white to gold-green. And the sound of the road disappears entirely.
 
+![The light through the canopy](../../assets/oki003_scene_12s.jpg)
+
 ---
 
 ## The Shrine
@@ -55,6 +59,8 @@ There are no guides, no explanations, no gift shops. You walk up, you look at it
 
 If you go: be quiet. Don't touch the offerings. Take nothing.
 
+![A shrine that's been here for five hundred years](../../assets/oki003_scene_20s.jpg)
+
 ---
 
 ## When to Go
@@ -64,6 +70,8 @@ The trail is best in the morning, when the light comes through the trees at a lo
 **Go early.** Bring water. Wear shoes you can actually walk in.
 
 The trail takes about 40 minutes round trip if you move slowly and stop to look at things. That's the right pace.
+
+![You'll probably be the only one there](../../assets/oki003_scene_28s.jpg)
 
 ---
 

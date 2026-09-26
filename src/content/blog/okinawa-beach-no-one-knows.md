@@ -2,7 +2,7 @@
 title: "The Beach in Okinawa That Nobody Photographed"
 description: "No crowds. No footprints. Just ocean and light. This is the kind of beach most visitors to Okinawa never find — because it's not in the search results."
 pubDate: 2026-10-09
-heroImage: ../../assets/beach.jpg
+heroImage: ../../assets/oki005_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"
   viator: "https://www.viator.com/ja-JP/Okinawa/d5614-ttd?localeSwitch=1"
@@ -14,6 +14,8 @@ There's a specific kind of beach in Okinawa that doesn't show up in travel guide
 Not the famous ones with the white sand and the Instagram angles. Not the resort beaches with the lounge chairs and the beach vendors. The other kind — the ones where you show up, and there's no one else there.
 
 We filmed OKI-005 at one of these places.
+
+![The beach in Okinawa with no one on it](../../assets/oki005_scene_2s.jpg)
 
 ---
 
@@ -29,6 +31,8 @@ What the photos don't show:
 
 This is what we were looking for when we shot OKI-005.
 
+![Ocean light, early morning](../../assets/oki005_scene_9s.jpg)
+
 ---
 
 ## October in Okinawa
@@ -41,6 +45,8 @@ The beach in OKI-005 is on the main island. We're not listing the exact location
 
 What we can say: if you walk past the main beach and keep going along the coast, there's usually something on the other side.
 
+![Just ocean. Just light.](../../assets/oki005_scene_16s.jpg)
+
 ---
 
 ## The Feeling We Were Trying to Capture
@@ -50,6 +56,8 @@ The shot we kept coming back to while editing was the one where the ocean fills 
 There's a specific feeling that happens when you're at a beach with no one else on it. It's not loneliness. It's more like the place is operating at its own speed, and you've arrived at the right time to see it.
 
 Most travel content tries to make you want to go somewhere. We were trying to make you feel like you were already there.
+
+![The water up close](../../assets/oki005_scene_23s.jpg)
 
 ---
 
@@ -65,6 +73,8 @@ A few practical notes:
 - **Go early** — even popular beaches are empty before 9am
 - **Walk the coast** — most beaches connect to other beaches if you follow the waterline
 - **October and January** — the best months for empty beaches and good light
+
+![Most people never find places like this](../../assets/oki005_scene_30s.jpg)
 
 **Browse Okinawa experiences:** [Viator Okinawa](https://www.viator.com/ja-JP/Okinawa/d5614-ttd?localeSwitch=1)
 
