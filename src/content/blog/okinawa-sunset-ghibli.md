@@ -39,7 +39,7 @@ On a clear evening in late September, the sky goes through six or seven distinct
 
 ## The Beach in the Video
 
-The beach in our OKI-002 video is on the west coast of the main island — a flat, open stretch with no development behind it. No resort. No beach bar. Just sand, water, and the horizon.
+The beach in our OKI-002 video is a flat, open stretch with no development behind it. No resort. No beach bar. Just sand, water, and the horizon.
 
 We filmed this in August, during the last week of peak summer. The tourist crowds had thinned out slightly, but the light was still perfect — golden hour in August lasts longer in Okinawa than anywhere else we've filmed.
 
