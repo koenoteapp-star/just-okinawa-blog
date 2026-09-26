@@ -1,6 +1,6 @@
 ---
 title: "Ep.003 — The Trail in Okinawa That Most Visitors Never Find"
-description: "An hour from Naha, there's a forest trail that leads to an ancient shrine. No crowds, no phone signal, no signs in English. Here's how to find it."
+description: "On Ishigaki Island, there's a forest trail that leads to an ancient shrine. No crowds, no phone signal, no signs in English. Here's how to find it."
 pubDate: 2026-09-25
 episodeId: "OKI-003"
 heroImage: ../../assets/oki003_hero.jpg
@@ -20,7 +20,7 @@ It's quieter. It's older. And it's an hour from the tourist strip.
 
 ## The Trail at Asmui
 
-The trail we filmed for OKI-003 sits in the northern part of the main island, in an area most visitors pass through on the way to the beach. There's no parking lot. No entrance fee. No signs in English.
+The trail we filmed for OKI-003 sits on Ishigaki Island, in an area most visitors pass through on the way to the beach. There's no parking lot. No entrance fee. No signs in English.
 
 What's there instead:
 
@@ -76,17 +76,17 @@ The trail takes about 40 minutes round trip if you move slowly and stop to look 
 
 ## Getting There
 
-The trail is in the northern part of Okinawa's main island, roughly an hour from Naha by car. We're not going to post the exact location here — the last thing this place needs is a tourist infrastructure.
+The trail is on Ishigaki Island. We're not going to post the exact location here — the last thing this place needs is a tourist infrastructure.
 
 Drop a 📍 in the comments on our [YouTube video](https://www.youtube.com/@JustOkinawaJP) and we'll send you directions directly.
 
 ---
 
-## Staying Near the North
+## Staying on Ishigaki
 
-If you want to explore the northern part of Okinawa's main island — the part that doesn't appear in most travel guides — there are a handful of small guesthouses in the Nago and Motobu area worth considering. Nothing fancy. Local family-run places, usually under ¥8,000 a night.
+If you're basing yourself on Ishigaki Island to explore places like this, there are small guesthouses and locally-run hotels worth considering. Nothing fancy — but you wake up on an island that most visitors only pass through.
 
-**Search Okinawa accommodations:** [Booking.com Okinawa](https://www.booking.com/region/jp/okinawa.html)
+**Search Ishigaki accommodation:** [Booking.com Okinawa](https://www.booking.com/region/jp/okinawa.html)
 
 ---
 
