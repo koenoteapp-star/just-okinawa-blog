@@ -1,6 +1,6 @@
 ---
-title: "Ep.003 — The Trail in Okinawa That Most Maps Don't Show"
-description: "An hour from Naha, there's a forest trail that leads to a five-hundred-year-old shrine. No crowds, no phone signal, no directions on Google Maps. Here's how to find it."
+title: "Ep.003 — The Trail in Okinawa That Most Visitors Never Find"
+description: "An hour from Naha, there's a forest trail that leads to an ancient shrine. No crowds, no phone signal, no signs in English. Here's how to find it."
 pubDate: 2026-09-25
 episodeId: "OKI-003"
 heroImage: ../../assets/oki003_hero.jpg
@@ -26,7 +26,7 @@ What's there instead:
 
 - Ancient *ficus* trees so wide you can't wrap your arms around them
 - A path that loses phone signal within ten minutes
-- A shrine that's been in continuous use for five hundred years
+- A sacred *utaki* shrine that feels untouched by time
 
 Locals come here. The kind of locals who don't talk much about it.
 
@@ -40,7 +40,7 @@ Most of Okinawa's famous natural spots have been discovered. Cape Manza. Emerald
 
 This trail is not busy.
 
-Part of that is because it doesn't look like much from the road. The entrance is unmarked. The first few minutes of walking are unremarkable — you're moving through second-growth forest, hearing traffic from the highway.
+Part of that is because it doesn't look like much from the road. The entrance is unmarked. The first few minutes of walking are unremarkable — you're moving through second-growth forest.
 
 Then it shifts.
 
@@ -54,13 +54,11 @@ The trees get older. The canopy closes. The light changes from white to gold-gre
 
 The shrine at the end of the trail is a *utaki* — a sacred site in Okinawan spiritual tradition. These aren't Buddhist temples or Shinto shrines imported from the mainland. They're indigenous to Okinawa, and many predate the Japanese annexation of the Ryukyu Kingdom.
 
-This one has been in continuous use for over five hundred years.
-
 There are no guides, no explanations, no gift shops. You walk up, you look at it, you leave.
 
 If you go: be quiet. Don't touch the offerings. Take nothing.
 
-![A shrine that's been here for five hundred years](../../assets/oki003_scene_20s.jpg)
+![A sacred shrine, quiet and undisturbed](../../assets/oki003_scene_20s.jpg)
 
 ---
 
