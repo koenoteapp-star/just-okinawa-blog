@@ -1,7 +1,8 @@
 ---
-title: "The Trail in Okinawa That Most Maps Don't Show"
+title: "Ep.003 — The Trail in Okinawa That Most Maps Don't Show"
 description: "An hour from Naha, there's a forest trail that leads to a five-hundred-year-old shrine. No crowds, no phone signal, no directions on Google Maps. Here's how to find it."
 pubDate: 2026-09-25
+episodeId: "OKI-003"
 heroImage: ../../assets/oki003_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"

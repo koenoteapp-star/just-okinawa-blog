@@ -1,7 +1,8 @@
 ---
-title: "The Hotel in Okinawa With an Ocean View That Nobody Talks About"
+title: "Ep.004 — The Hotel in Okinawa With an Ocean View That Nobody Talks About"
 description: "No crowds. No noise. Just coffee and that view. This is the kind of place most visitors to Okinawa never find — and that's exactly why it's worth finding."
 pubDate: 2026-09-25
+episodeId: "OKI-004"
 heroImage: ../../assets/oki004_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"

@@ -1,7 +1,8 @@
 ---
-title: "Okinawa Hits Different at Sunset. Here's Why."
+title: "Ep.002 — Okinawa Hits Different at Sunset. Here's Why."
 description: "No filter. No crowds. Just the Pacific and a sky that turns every color at once. This is what Okinawa looks like after 6pm — and most visitors never see it."
 pubDate: 2026-09-25
+episodeId: "OKI-002"
 heroImage: ../../assets/oki002_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"

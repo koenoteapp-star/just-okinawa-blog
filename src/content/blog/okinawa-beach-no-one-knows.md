@@ -1,7 +1,8 @@
 ---
-title: "The Beach in Okinawa That Nobody Photographed"
+title: "Ep.005 — The Beach in Okinawa That Nobody Photographed"
 description: "No crowds. No footprints. Just ocean and light. This is the kind of beach most visitors to Okinawa never find — because it's not in the search results."
 pubDate: 2026-10-09
+episodeId: "OKI-005"
 heroImage: ../../assets/oki005_hero.jpg
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"
