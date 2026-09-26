@@ -1,142 +1,63 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
+/* JUST OKINAWA — a quiet island journal. No external font or UI dependency. */
 :root {
-	--accent: #00b4d8;
-	--accent-dark: #0077a8;
-	--accent-amber: #f4a535;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+  color-scheme: dark;
+  --bg: #101311;
+  --surface: #191d19;
+  --text: #f1efe7;
+  --muted: #b5b9ad;
+  --line: #363d34;
+  --accent: #c8d1ae;
+  --accent-dark: #dbe3c7;
+  --accent-amber: #d4bb88;
+  /* Compatibility with existing BaseHead, Footer and other starter pages. */
+  --black: 241, 239, 231;
+  --gray: 181, 185, 173;
+  --gray-light: 54, 61, 52;
+  --gray-dark: 224, 226, 217;
+  --gray-gradient: #101311, #101311;
+  --box-shadow: 0 12px 40px #0003;
+  --gutter: clamp(22px, 5vw, 88px);
+  --font-editorial: Arial, Helvetica, sans-serif;
 }
-body {
-	font-family: var(--font-atkinson);
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
-}
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-strong,
-b {
-	font-weight: 700;
-}
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-}
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
-}
-
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-editorial); font-size: 18px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--bg); }
+main { width: min(100% - 2 * var(--gutter), 760px); margin: auto; padding: 64px 0; }
+main.editorial-main { width: 100%; max-width: none; margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6 { color: var(--text); margin: 0; font-weight: 600; line-height: 1.08; letter-spacing: -.045em; overflow-wrap: anywhere; }
+h1 { font-size: clamp(42px, 7vw, 100px); }
+h2 { font-size: clamp(32px, 4.5vw, 64px); }
+h3 { font-size: clamp(25px, 3vw, 36px); }
+h4 { font-size: 24px; }
+p { margin: 0 0 1.4em; }
+a { color: var(--accent); text-underline-offset: .25em; }
+a:hover { color: var(--text); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+img { max-width: 100%; height: auto; display: block; border-radius: 0; }
+button,input,textarea,select { font: inherit; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+blockquote { border-left: 1px solid var(--accent); padding-left: 24px; margin: 2em 0; color: var(--text); font-size: 1.25em; }
+pre { max-width: 100%; overflow-x: auto; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 0; }
+code { font-size: .85em; }
+table { border-collapse: collapse; width: 100%; }
+th,td { border-bottom: 1px solid var(--line); padding: 12px; text-align: left; }
+.sr-only { border:0; padding:0; margin:0; position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); clip-path:inset(50%); white-space:nowrap; }
+.skip-link { position: absolute; left: 16px; top: -100px; z-index: 100; padding: 12px 20px; background: var(--text); color: var(--bg); }
+.skip-link:focus { top: 12px; color: var(--bg); }
+.shell { width: min(100% - 2 * var(--gutter), 1440px); margin-inline: auto; }
+.eyebrow { display: block; font-size: 10px; font-weight: 500; letter-spacing: .18em; line-height: 1.5; text-transform: uppercase; }
+.text-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 36px; min-height: 44px; padding-block: 10px; border-bottom: 1px solid currentColor; color: var(--text); font-size: 12px; text-decoration: none; }
+.text-link span { transition: transform .25s ease; }
+.text-link:hover span { transform: translateX(5px); }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding-block: 24px; border-top: 1px solid var(--line); }
+.section-heading h2 { font-size: clamp(24px, 3vw, 36px); }
+.section-heading .eyebrow { color: var(--muted); }
+/* Preserve the existing Footer component and its links while harmonizing its palette. */
+body > footer { margin-top: 0; padding: 48px var(--gutter); border-top: 1px solid var(--line); background: var(--bg) !important; color: var(--muted) !important; font-size: 12px; }
+body > footer a { color: var(--muted); }
+body > footer a:hover { color: var(--text); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
