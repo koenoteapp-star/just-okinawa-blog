@@ -1,5 +1,5 @@
 ---
-title: "The Ramen Shop in Okinawa That Locals Actually Go To"
+title: "Ep.006 — The Ramen Shop in Okinawa That Locals Actually Go To"
 description: "¥950. Tonkotsu. No English menu. South of Naha. Full of locals at noon. This is the kind of ramen shop that keeps a town running."
 pubDate: "2026-09-27T09:00:00+09:00"
 heroImage: ../../assets/oki006_hero.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Ep.005 — The Beach in Okinawa That Nobody Photographed"
 description: "A ferry from Ishigaki. A bus to the end of the road. Another boat. Then this. The most remote beach we've ever filmed — and nobody else was there."
-pubDate: 2026-10-09
+pubDate: "2026-09-27T09:00:00+09:00"
 episodeId: "OKI-005"
 heroImage: ../../assets/oki005_hero.jpg
 affiliateLinks:
