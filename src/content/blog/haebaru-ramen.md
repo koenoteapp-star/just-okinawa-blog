@@ -1,9 +1,14 @@
 ---
-title: "Ep.006 — The Ramen Shop in Okinawa That Locals Actually Go To"
+title: "The Ramen Shop in Okinawa That Locals Actually Go To"
 description: "¥950. Tonkotsu. No English menu. South of Naha. Full of locals at noon. This is the kind of ramen shop that keeps a town running."
-pubDate: 2026-09-27
-episodeId: "OKI-006"
+pubDate: "2026-09-27T09:00:00+09:00"
 heroImage: ../../assets/oki006_hero.jpg
+heroAlt: "Bowl of tonkotsu ramen at みなや in Haebaru, Okinawa, with Japanese menu board visible in background"
+destination: main
+experiences: [food]
+draft: false
+imageCredit: "Just Okinawa"
+imageSource: "https://www.youtube.com/@JustOkinawaJP"
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"
   viator: "https://www.viator.com/ja-JP/Okinawa/d5614-ttd?localeSwitch=1"

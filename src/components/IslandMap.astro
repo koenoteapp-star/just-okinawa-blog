@@ -1,0 +1,18 @@
+---
+import {destinations} from '../data/destinations';
+import map from '../data/map.json';
+const labelPositions:Record<string,[number,number]>={main:[570,65],kerama:[560,230],kume:[352,86],miyako:[340,325],yaeyama:[120,370]};
+---
+<section class="island-section" id="islands" aria-labelledby="island-heading"><div class="wrap"><div class="section-top"><div><span class="eyebrow">01 — FIND YOUR ISLAND</span><h2 id="island-heading">One Okinawa.<br/><em>So many ways to feel it.</em></h2></div><p>Every island has a different rhythm.<br/>Find the one that feels like you.</p></div>
+<div class="island-explorer"><div class="map-area"><div class="map-intro"><span class="eyebrow">JAPAN’S SOUTHERN ISLANDS</span><span class="map-hint">Choose an island to explore ↘</span></div>
+<svg class="okinawa-map" viewBox="0 0 680 430" role="img" aria-label="Map showing Okinawa Main Island, Kume, Kerama, Miyako and the Yaeyama Islands in their geographical positions"><defs><pattern id="sea-grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M 42 0 L 0 0 0 42" fill="none" stroke="#cbdad7" stroke-width=".55"/></pattern></defs><rect width="680" height="430" fill="url(#sea-grid)"/><text x="46" y="175" class="sea-label">EAST CHINA SEA</text><text x="450" y="385" class="sea-label">PACIFIC OCEAN</text><path d={map.path} class="island-outlines"/>{map.points.map(point=>{const [x,y]=labelPositions[point.id];return <g><path d={`M${point.x},${point.y} L${x},${y}`} class="map-leader"/><circle cx={point.x} cy={point.y} r="5" fill="#b96140"/><circle cx={point.x} cy={point.y} r="11" fill="none" stroke="#b9614060"/></g>;})}<g transform="translate(8 8)"><rect width="146" height="132" rx="2" fill="#f7f6ed"/><path d={map.inset} fill="#b2c6be"/><text x="12" y="122" class="inset-label">JAPAN</text></g><text x="625" y="31" class="north">N ↑</text></svg>
+<div class="map-labels">{destinations.map(d=>{const [x,y]=labelPositions[d.id];return <button class:list={['map-label',{'is-active':d.id==='miyako'}]} style={`left:${x/680*100}%;top:${y/430*100}%`} data-island={d.id} aria-pressed={d.id==='miyako'}>{d.short}<span>{d.jp}</span></button>;})}</div><p class="map-footnote">Island outlines: Natural Earth · Selected destinations</p></div>
+<div class="island-panels">{destinations.map(d=><article class="island-panel" data-panel={d.id} hidden={d.id!=='miyako'}>{d.image?<img src={d.image} alt={d.alt} width="700" height="460" loading="lazy"/>:<div class="map-no-photo"><span>{d.jp}</span><p>Kume Island</p></div>}<div class="island-panel-body"><span class="eyebrow">{d.tag}</span><h3>{d.name}</h3><p>{d.intro}</p><a class="text-link" href={`/islands/${d.id}/`}>Discover {d.short}<span aria-hidden="true">↗</span></a></div></article>)}</div>
+</div><noscript><div class="island-fallback">{destinations.map(d=><a href={`/islands/${d.id}/`}>{d.name} ↗</a>)}</div></noscript></div></section>
+<script>
+ document.querySelectorAll<HTMLButtonElement>('[data-island]').forEach(button=>button.addEventListener('click',()=>{
+  const id=button.dataset.island;
+  document.querySelectorAll<HTMLButtonElement>('[data-island]').forEach(b=>{const selected=b.dataset.island===id;b.setAttribute('aria-pressed',String(selected));b.classList.toggle('is-active',selected);});
+  document.querySelectorAll<HTMLElement>('[data-panel]').forEach(panel=>panel.hidden=panel.dataset.panel!==id);
+ }));
+</script>

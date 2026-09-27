@@ -1,0 +1,65 @@
+[
+  {
+    "file": "/images/hero.webp",
+    "source": "https://unsplash.com/photos/g7Y1TgK-vhU",
+    "photographer": "Roméo A.",
+    "license": "https://unsplash.com/license",
+    "bytes": 1058110
+  },
+  {
+    "file": "/images/taketomi.webp",
+    "source": "https://unsplash.com/photos/a_WGrpnkjmE",
+    "photographer": "Wataru Sato",
+    "license": "https://unsplash.com/license",
+    "bytes": 89808
+  },
+  {
+    "file": "/images/kerama.webp",
+    "source": "https://unsplash.com/photos/VAtK8vTHb4Q",
+    "photographer": "Roméo A.",
+    "license": "https://unsplash.com/license",
+    "bytes": 120708
+  },
+  {
+    "file": "/images/night.webp",
+    "source": "https://unsplash.com/photos/tr8q-FO9SJg",
+    "photographer": "Irvin Aloise",
+    "license": "https://unsplash.com/license",
+    "bytes": 69818
+  },
+  {
+    "file": "/images/forest.webp",
+    "source": "https://unsplash.com/photos/jQv2TBPZ2H8",
+    "photographer": "Onnuri Yi",
+    "license": "https://unsplash.com/license",
+    "bytes": 279886
+  },
+  {
+    "file": "/images/trees.webp",
+    "source": "https://unsplash.com/photos/JnrxmP1UosE",
+    "photographer": "Tyler Zhang",
+    "license": "https://unsplash.com/license",
+    "bytes": 301380
+  },
+  {
+    "file": "/images/beach.webp",
+    "source": "https://unsplash.com/photos/clZ1TLNUqLQ",
+    "photographer": "Tyler Zhang",
+    "license": "https://unsplash.com/license",
+    "bytes": 150006
+  },
+  {
+    "file": "/images/market.webp",
+    "source": "https://unsplash.com/photos/7GC42cO7cY0",
+    "photographer": "Krisna Yuda",
+    "license": "https://unsplash.com/license",
+    "bytes": 57546
+  },
+  {
+    "file": "/images/welcome.webp",
+    "source": "https://unsplash.com/photos/3kGrFT8eQRU",
+    "photographer": "Roméo A.",
+    "license": "https://unsplash.com/license",
+    "bytes": 384450
+  }
+]

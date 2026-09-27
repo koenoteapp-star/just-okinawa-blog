@@ -1,78 +1,39 @@
 ---
-import { Image } from 'astro:assets';
-
-import { getCollection } from 'astro:content';
-
-import BaseHead from '../../components/BaseHead.astro';
-
-import Footer from '../../components/Footer.astro';
-
-import FormattedDate from '../../components/FormattedDate.astro';
-
-import Header from '../../components/Header.astro';
-
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
-
-const posts = (await getCollection('blog')).sort(
-
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-
-);
+import {getCollection} from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import {destinations,experiences} from '../../data/destinations';
+import {published,meta,publicationMonth} from '../../lib/editorial';
+const posts=(await getCollection('blog')).filter(published).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const months=[...new Set(posts.map(p=>publicationMonth(p.data.pubDate)))];
 ---
-<!doctype html>
-<html lang="en">
-  <head><BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} /></head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <Header />
-    <main id="main" class="editorial-main">
-      <div class="archive shell">
-        <header class="archive-intro"><span class="eyebrow">The journal / Okinawa, Japan</span><h1>Island stories.</h1><p>Places to linger. Things to taste.<br />A little closer to everyday Okinawa.</p></header>
-        <section aria-label="All articles">
-          <div class="section-heading"><span class="eyebrow">All stories</span><span class="eyebrow">{String(posts.length).padStart(2, '0')} entries</span></div>
-          <ul class="archive-grid">
-            {posts.map((post) => (
-              <li class="archive-card">
-                <a href={`/blog/${post.id}/`}>
-                  <div class="archive-media">{post.data.heroImage ? <Image width={1200} height={750} src={post.data.heroImage} alt="" loading="lazy" /> : <span class="eyebrow">Just Okinawa / Journal</span>}</div>
-                  <div class="archive-caption"><p class="eyebrow date"><FormattedDate date={post.data.pubDate} /></p><h2>{post.data.title}</h2><p class="description">{post.data.description}</p><span class="read">Read the story <span aria-hidden="true">↗</span></span></div>
-                </a>
-              </li>
-            ))}
-          </ul>
-          {posts.length === 0 && <p class="archive-empty">Our first island stories are on their way.</p>}
-        </section>
-      </div>
-    </main>
-    <Footer />
-  </body>
-</html>
-<style>
-  .archive { padding-block: clamp(48px, 8vw, 120px) 100px; }
-  .archive-intro { margin-bottom: 64px; }
-  .archive-intro .eyebrow { color: var(--muted); margin-bottom: 28px; }
-  .archive-intro h1 { font-size: clamp(52px, 9vw, 144px); line-height: 1; }
-  .archive-intro > p { color: var(--muted); margin: 24px 0 0; font-size: 16px; }
-  .archive-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px 40px; list-style: none; margin: 16px 0 0; padding: 0; }
-  .archive-card a { display: block; height: 100%; color: var(--text); text-decoration: none; }
-  .archive-media { display: grid; place-items: center; aspect-ratio: 8/5; overflow: hidden; background: var(--surface); }
-  .archive-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s ease; }
-  .archive-card a:hover img { transform: scale(1.035); }
-  .archive-caption { padding-top: 22px; }
-  .date { color: var(--muted); margin-bottom: 14px; }
-  .archive-caption h2 { font-size: clamp(28px, 3.5vw, 46px); }
-  .description { color: var(--muted); font-size: 14px; margin: 18px 0; max-width: 470px; }
-  .read { font-size: 12px; }
-  .read span { display: inline-block; margin-left: 18px; transition: transform .25s; }
-  a:hover .read span { transform: translate(3px, -3px); }
-  .archive-card:first-child { grid-column: 1 / -1; padding-bottom: 48px; border-bottom: 1px solid var(--line); }
-  .archive-card:first-child a { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: center; }
-  .archive-card:first-child .archive-caption { padding: 0; }
-  .archive-empty { padding-block: 40px; color: var(--muted); }
-  @media (max-width: 760px) {
-    .archive-grid { gap: 42px 24px; }
-    .archive-card:first-child a { display: block; }
-    .archive-card:first-child .archive-caption { padding-top: 22px; }
-  }
-  @media (max-width: 540px) { .archive-grid { grid-template-columns: 1fr; } .archive-intro { margin-bottom: 40px; } }
-</style>
+<SiteLayout title="The Journal — Just Okinawa" description="Fresh stories from Okinawa. Explore by island, experience or month, and find a little inspiration for your next journey."><div class="wrap"><header class="page-intro"><span class="eyebrow">EVERYDAY MOMENTS. ISLAND STORIES.</span><h1>The island <em>journal.</em></h1><p>A place to return to. Fresh stories, quiet discoveries, and a little inspiration for your next journey.</p></header><section class="content-section" aria-label="Browse articles"><form class="filter-bar" id="journal-filters" role="search"><label>Search the journal<input type="search" name="q" id="search" placeholder="Try a place, a flavor, a feeling…"/></label><label>Island<select name="island" id="island"><option value="">All islands</option>{destinations.map(d=><option value={d.id}>{d.name}</option>)}</select></label><label>Experience<select name="experience" id="experience"><option value="">All experiences</option>{experiences.map(e=><option value={e.id}>{e.label}</option>)}</select></label><label>Month<select name="month" id="month"><option value="">Any time</option>{months.map(m=><option value={m}>{new Date(m+'-01T00:00:00Z').toLocaleDateString('en',{month:'long',year:'numeric',timeZone:'UTC'})}</option>)}</select></label></form><p class="results-count" id="results-count" role="status" aria-live="polite">{posts.length} stories · Latest first</p><div class="post-grid" id="journal-results">{posts.slice(0,12).map(post=><PostCard post={post}/>)}</div><p id="empty-state" class="empty-state" hidden>No stories match yet. Try another island or a broader search.</p><div class="pagination" id="pagination" hidden><button id="previous" type="button">← Previous</button><span id="page-label"></span><button id="next" type="button">Next →</button></div><noscript><p>All stories:</p><ul>{posts.map(p=><li><a href={`/blog/${p.id}/`}>{p.data.title}</a></li>)}</ul></noscript><template id="article-catalog">{posts.map(post=><div data-search={`${post.data.title} ${post.data.description}`.toLowerCase()} data-destination={meta(post).destination??''} data-experiences={(meta(post).experiences??[]).join(' ')} data-month={publicationMonth(post.data.pubDate)}><PostCard post={post}/></div>)}</template></section></div></SiteLayout>
+<script>
+ const form=document.querySelector<HTMLFormElement>('#journal-filters')!;
+ const controls=['q','island','experience','month'].map(name=>form.elements.namedItem(name) as HTMLInputElement|HTMLSelectElement);
+ const catalog=Array.from(document.querySelector<HTMLTemplateElement>('#article-catalog')!.content.children) as HTMLElement[];
+ const results=document.querySelector<HTMLElement>('#journal-results')!;
+ const count=document.querySelector<HTMLElement>('#results-count')!;
+ const pagination=document.querySelector<HTMLElement>('#pagination')!;
+ const prev=document.querySelector<HTMLButtonElement>('#previous')!;
+ const next=document.querySelector<HTMLButtonElement>('#next')!;
+ let current=1;
+ function render(updateUrl=true){
+  const [query,island,experience,month]=controls.map(c=>c.value.trim().toLowerCase());
+  const list=catalog.filter(p=>(!query||p.dataset.search?.includes(query))&&(!island||p.dataset.destination===island)&&(!experience||p.dataset.experiences?.split(' ').includes(experience))&&(!month||p.dataset.month===month));
+  const total=Math.max(1,Math.ceil(list.length/12));current=Math.max(1,Math.min(total,current));
+  results.replaceChildren(...list.slice((current-1)*12,current*12).map(p=>p.firstElementChild!.cloneNode(true)));
+  count.textContent=`${list.length} ${list.length===1?'story':'stories'} · Latest first`;
+  document.querySelector<HTMLElement>('#empty-state')!.hidden=list.length>0;
+  pagination.hidden=total<=1;prev.disabled=current===1;next.disabled=current===total;
+  document.querySelector('#page-label')!.textContent=`${current} / ${total}`;
+  if(updateUrl){const params=new URLSearchParams();controls.forEach(c=>{if(c.value)params.set(c.name,c.value);});if(current>1)params.set('page',String(current));history.replaceState(null,'',location.pathname+(params.size?'?'+params.toString():''));}
+ }
+ function fromURL(){const params=new URLSearchParams(location.search);controls.forEach(c=>c.value=params.get(c.name)??'');current=Number(params.get('page'))||1;render(false);}
+ form.addEventListener('submit',e=>{e.preventDefault();current=1;render();});
+ let timer:ReturnType<typeof setTimeout>;
+ form.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{current=1;render();},120);});
+ prev.addEventListener('click',()=>{current--;render();form.scrollIntoView({block:'start'});});
+ next.addEventListener('click',()=>{current++;render();form.scrollIntoView({block:'start'});});
+ window.addEventListener('popstate',fromURL);fromURL();
+</script>

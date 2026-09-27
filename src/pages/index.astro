@@ -1,120 +1,19 @@
 ---
-import { Image } from 'astro:assets';
-
-import { getCollection } from 'astro:content';
-
-import BaseHead from '../components/BaseHead.astro';
-
-import Footer from '../components/Footer.astro';
-
-import Header from '../components/Header.astro';
-
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-
-const posts = (await getCollection('blog')).sort(
-
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-
-);
-
-const [hero, ...rest] = posts;
-
-const secondary = rest.slice(0, 2);
+import {getCollection} from 'astro:content';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import IslandMap from '../components/IslandMap.astro';
+import PostCard from '../components/PostCard.astro';
+import {experiences} from '../data/destinations';
+import {published} from '../lib/editorial';
+const posts=(await getCollection('blog')).filter(published).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const latest=posts.slice(0,6);
 ---
-<!doctype html>
-<html lang="en">
-  <head><BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} /></head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <Header />
-    <main id="main" class="editorial-main">
-      <section class="opening shell" aria-label="Just Okinawa introduction">
-        <p class="eyebrow">An independent island journal</p>
-        <p class="opening-note">Okinawa, Japan <span aria-hidden="true">↘</span></p>
-      </section>
-      {hero ? (
-        <section class="hp-hero" aria-labelledby="hero-title">
-          {hero.data.heroImage && <Image src={hero.data.heroImage} alt={hero.data.title} width={1600} height={900} class="hp-hero__img" loading="eager" fetchpriority="high" />}
-          <div class="hp-hero__overlay">
-            <div class="shell hp-hero__content">
-              <span class="eyebrow">01 / Featured story</span>
-              <h1 id="hero-title">{hero.data.title}</h1>
-              <div class="hp-hero__bottom">
-                <p>{hero.data.description}</p>
-                <a href={`/blog/${hero.id}/`} class="text-link">Read the story <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </div>
-        </section>
-      ) : (
-        <section class="empty shell"><span class="eyebrow">Just Okinawa</span><h1>A slower side<br />of Japan.</h1><p>Stories from the islands. Coming soon.</p></section>
-      )}
-      <section class="journal shell" aria-labelledby="journal-title">
-        <div class="section-heading"><h2 id="journal-title">From the islands.</h2><a href="/blog" class="text-link">All stories <span aria-hidden="true">↗</span></a></div>
-        <div class="hp-grid">
-          {secondary.map((post, i) => (
-            <article class="hp-card">
-              <a href={`/blog/${post.id}/`} class="hp-card__link">
-                <div class="hp-card__media">
-                  {post.data.heroImage ? <Image src={post.data.heroImage} alt="" width={800} height={500} class="hp-card__img" loading="lazy" /> : <span class="eyebrow">Just Okinawa / Journal</span>}
-                  <span class="card-number" aria-hidden="true">0{i + 2}</span>
-                </div>
-                <div class="hp-card__caption"><h3>{post.data.title}</h3><span aria-hidden="true">↗</span></div>
-                <p>{post.data.description}</p>
-              </a>
-            </article>
-          ))}
-        </div>
-        {secondary.length === 0 && <p class="quiet">More island stories are on their way.</p>}
-      </section>
-      <section class="island-note shell" aria-labelledby="island-title">
-        <span class="eyebrow">A different rhythm</span>
-        <div><h2 id="island-title">Less itinerary.<br />More island.</h2><p>Beyond the postcard: everyday places, local flavors, and the quiet moments in between.</p><a href="/about" class="text-link">About the journal <span aria-hidden="true">↗</span></a></div>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
-<style>
-  .opening { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 22px; }
-  .opening p { margin: 0; }
-  .opening-note { font-size: 11px; color: var(--muted); }
-  .opening-note span { margin-left: 28px; }
-  .hp-hero { position: relative; isolation: isolate; display: grid; min-height: min(800px, 85svh); background: #252d26; }
-  .hp-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .hp-hero__overlay { position: relative; display: flex; align-items: end; background: linear-gradient(180deg, #070c0830 0%, #070c0850 28%, #070c08dd 100%); }
-  .hp-hero__content { padding-block: clamp(40px, 6vw, 88px); }
-  .hp-hero .eyebrow { color: #eee; margin-bottom: 32px; }
-  .hp-hero h1 { max-width: 1100px; font-size: clamp(44px, 6.5vw, 104px); line-height: .99; letter-spacing: -.055em; text-wrap: balance; }
-  .hp-hero__bottom { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-top: 32px; }
-  .hp-hero__bottom p { max-width: 490px; margin: 0; font-size: 15px; color: #e0e3d8; }
-  .hp-hero__bottom a { flex-shrink: 0; }
-  .journal { padding-block: 80px; }
-  .hp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 14px; }
-  .hp-card:nth-child(2) { margin-top: 88px; }
-  .hp-card__link { color: var(--text); text-decoration: none; }
-  .hp-card__media { position: relative; display: grid; place-items: center; aspect-ratio: 8/5; overflow: hidden; background: var(--surface); }
-  .hp-card__img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s ease; }
-  .hp-card__link:hover .hp-card__img { transform: scale(1.035); }
-  .card-number { position: absolute; top: 16px; left: 16px; padding: 3px 10px; background: #101311bf; font-size: 10px; }
-  .hp-card__caption { display: flex; justify-content: space-between; gap: 24px; margin-top: 22px; }
-  .hp-card__caption h3 { font-size: clamp(26px, 3vw, 42px); }
-  .hp-card__link p { color: var(--muted); font-size: 14px; margin: 16px 0 0; max-width: 460px; }
-  .island-note { border-top: 1px solid var(--line); padding-block: 72px 104px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
-  .island-note > .eyebrow { color: var(--muted); }
-  .island-note h2 { font-size: clamp(48px, 7.5vw, 112px); line-height: 1; }
-  .island-note p { margin: 30px 0 20px; max-width: 440px; color: var(--muted); font-size: 16px; }
-  .empty { padding-block: 70px; }
-  .empty h1 { margin-block: 30px; }
-  .quiet { color: var(--muted); font-size: 14px; }
-  @media (max-width: 640px) {
-    .opening-note { display: none; }
-    .hp-hero { min-height: 620px; min-height: 78svh; }
-    .hp-hero__bottom { display: block; }
-    .hp-hero__bottom a { margin-top: 24px; }
-    .hp-grid { grid-template-columns: 1fr; gap: 42px; }
-    .hp-card:nth-child(2) { margin-top: 0; }
-    .journal { padding-block: 48px; }
-    .island-note { grid-template-columns: 1fr; padding-block: 40px 64px; gap: 28px; }
-  }
-</style>
+<SiteLayout title="Just Okinawa — Find your island rhythm" description="Discover Okinawa through extraordinary places and everyday moments. Explore the islands, find your kind of experience, and plan a slower journey." overlay>
+<section class="hero"><img class="hero-image" src="/images/welcome.webp" srcset="/images/welcome-small.webp 900w, /images/welcome.webp 1920w" sizes="100vw" width="2000" height="1333" alt="White sand and turquoise water at Furuzamami Beach, Zamami, Okinawa" fetchpriority="high"/><div class="hero-shade"></div><div class="hero-content wrap"><span class="eyebrow">A DIFFERENT SIDE OF JAPAN</span><h1>Somewhere<br/>you can just <em>be.</em></h1><p>Extraordinary islands. Everyday magic.<br/>Find your own Okinawa.</p><a class="button button-light" href="#islands">Find your island <span aria-hidden="true">↗</span></a></div><div class="hero-bottom wrap"><span>ZAMAMI ISLAND, OKINAWA</span><a href="#intro">A slower story starts here <span aria-hidden="true">↓</span></a><span class="hero-japanese" lang="ja">ありのままの、沖縄。</span></div></section>
+<section class="intro wrap" id="intro"><div class="intro-label"><span class="eyebrow">WELCOME TO JUST OKINAWA</span><span lang="ja">島時間</span></div><div class="intro-copy"><h2>Not just a place.<br/><em>A different pace.</em></h2><p>Past the postcard-blue sea, there’s another Okinawa. A quiet lane. A little neighborhood kitchen. An afternoon that asks nothing of you.</p><p>Come for the islands. Stay for the way they make you feel.</p><a class="text-link" href="/about/">Meet Just Okinawa <span aria-hidden="true">↗</span></a></div><figure class="intro-photo"><img src="/images/taketomi.webp" alt="Pink flowers beside a traditional red-tiled roof on Taketomi Island" width="700" height="900" loading="lazy"/><figcaption>THE BEAUTY IS IN THE EVERYDAY.</figcaption></figure></section>
+<IslandMap/>
+<section class="experiences-section wrap" id="experiences"><div class="section-top"><div><span class="eyebrow">02 — FOLLOW YOUR FEELING</span><h2>What brings <em>you here?</em></h2></div><p>A plan is optional.<br/>A little curiosity is all you need.</p></div><div class="experience-grid">{experiences.map((e,i)=><a class="experience-card" href={`/experiences/${e.id}/`}><img src={e.image} alt={e.label} width="640" height="900" loading="lazy"/><span class="experience-number">0{i+1}</span><div><span class="eyebrow">{e.label}</span><h3>{e.name}</h3><span class="experience-arrow" aria-hidden="true">↗</span></div></a>)}</div></section>
+<section class="trip-band"><div class="wrap trip-band-inner"><div><span class="eyebrow">03 — MAKE IT YOURS</span><h2>A few days.<br/><em>A world away.</em></h2><p>Start with one island, a little room in your itinerary, and a few places you can’t wait to see.</p><a class="button" href="/plan/">Start planning <span aria-hidden="true">↗</span></a></div><div class="trip-list"><a href="/plan/#first-visit"><span>01 / YOUR FIRST VISIT</span><h3>A little of everything.</h3><p>Main island · A flexible 3-day starting point</p><b aria-hidden="true">↗</b></a><a href="/plan/#slow-islands"><span>02 / SLOW ISLAND DAYS</span><h3>Less rushing. More living.</h3><p>Yaeyama · A flexible 5-day starting point</p><b aria-hidden="true">↗</b></a><a href="/plan/#essentials"><span>03 / BEFORE YOU GO</span><h3>The practical little things.</h3><p>Getting here, getting around, and when to visit</p><b aria-hidden="true">↗</b></a></div></div></section>
+<section class="journal-section wrap" id="journal"><div class="section-top"><div><span class="eyebrow">04 — THE ISLAND JOURNAL</span><h2>Fresh from <em>the islands.</em></h2></div><a class="text-link" href="/blog/">Explore the journal <span aria-hidden="true">↗</span></a></div><div class="post-grid">{latest.map(post=><PostCard post={post}/>)}</div>{!latest.length&&<p>The first stories are on their way. In the meantime, explore the islands.</p>}</section>
+<section class="closing"><img src="/images/night.webp" width="1600" height="1000" alt="Stars over Taketomi in Okinawa" loading="lazy"/><div class="closing-copy"><span class="eyebrow">TAKE A LITTLE OKINAWA WITH YOU</span><h2>Some places stay<br/><em>with you.</em></h2><p>A little island life, wherever you are.</p><div class="closing-socials"><a href="https://www.instagram.com/just_okinawa" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@just_okinawa" target="_blank" rel="noopener noreferrer">TikTok ↗</a><a href="https://www.youtube.com/@JustOkinawaJP" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></div></section>
+</SiteLayout>

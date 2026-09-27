@@ -1,0 +1,11 @@
+---
+import {Image} from 'astro:assets';
+import type {CollectionEntry} from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+import {meta} from '../lib/editorial';
+import {destinations} from '../data/destinations';
+interface Props {post:CollectionEntry<'blog'>;}
+const {post}=Astro.props;
+const data=meta(post);const island=destinations.find(d=>d.id===data.destination);
+---
+<article class="post-card"><a href={`/blog/${post.id}/`}><div class="post-card-image">{post.data.heroImage ? <Image src={post.data.heroImage} width={760} height={520} alt={data.heroAlt??post.data.title} loading="lazy"/>:<img src="/images/trees.webp" width="760" height="520" alt="" loading="lazy"/>}<span class="round-arrow" aria-hidden="true">↗</span></div><div class="post-meta"><span>{island?.short??'Island journal'}</span><FormattedDate date={post.data.pubDate}/></div><h3>{post.data.title}</h3><p>{post.data.description}</p></a></article>

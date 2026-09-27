@@ -1,3 +1,9 @@
+## JUST OKINAWA publishing
+For content publishing, read and follow docs/CLAUDE_PUBLISHING.md.
+New posts require destination, experiences, heroAlt, image attribution and a timezone-aware publication datetime.
+Run the per-post validator, type check and production build before the established deployment workflow.
+Keep layout, components and site configuration unchanged during routine daily posting.
+
 ## Development
 
 When starting the dev server, use background mode:
