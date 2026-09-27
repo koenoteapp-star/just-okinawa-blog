@@ -2,8 +2,8 @@
 title: "Ep.006 — The Ramen Shop in Okinawa That Locals Actually Go To"
 description: "¥950. Tonkotsu. No English menu. South of Naha. Full of locals at noon. This is the kind of ramen shop that keeps a town running."
 pubDate: "2026-09-27T09:00:00+09:00"
-heroImage: ../../assets/oki006_hero.jpg
-heroAlt: "Bowl of tonkotsu ramen at みなや in Haebaru, Okinawa, with Japanese menu board visible in background"
+heroImage: ../../assets/oki006_ramen_angle2.jpg
+heroAlt: "Tonkotsu ramen bowl at みなや in Haebaru, Okinawa — chashu, spinach, nori and thick noodles in rich pork-bone broth"
 destination: main
 experiences: [food]
 draft: false
@@ -29,6 +29,8 @@ The broth here is the kind that coats the back of a spoon. Not light. Not delica
 
 ¥950.
 
+![Tonkotsu ramen closeup at みなや, Haebaru — with Japanese menu board visible in background](../../assets/oki006_ramen_closeup.jpg)
+
 ---
 
 ## Where It Is
@@ -39,6 +41,8 @@ Haebaru — a town just south of Naha that almost no tourist ever has a reason t
 
 We filmed this on a Tuesday. The seats filled up with what appeared to be construction workers, office workers, a few older men eating alone. Not a tourist in sight.
 
+![Entrance to みなや ramen shop in Haebaru, Okinawa — red noren curtain and hand-written shop sign](../../assets/oki006_entrance.jpg)
+
 ---
 
 ## The Menu
@@ -48,6 +52,8 @@ No English. No photos. Just kanji on a board above the counter.
 If you want to order, the main thing to know is: *tonkotsu ramen* (豚骨ラーメン). You can ask for your noodles hard or soft, your broth rich or lighter, and your nori on or off. Most regulars don't ask — they just say *futsu* (普通 / normal) and that's enough.
 
 The staff won't push you away for not speaking Japanese. But they also won't do the work for you.
+
+![Another angle of the tonkotsu ramen bowl at みなや, showing nori and Japanese writing on wall](../../assets/oki006_ramen_full.jpg)
 
 ---
 
