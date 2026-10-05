@@ -8,7 +8,7 @@ destination: main
 experiences: [nature]
 draft: false
 imageCredit: "Just Okinawa"
-imageSource: ""
+imageSource: "https://www.youtube.com/shorts/RcogssdVjVY"
 affiliateLinks:
   booking: "https://www.booking.com/region/jp/okinawa.html"
   viator: "https://www.viator.com/ja-JP/Okinawa/d5614-ttd?localeSwitch=1"
