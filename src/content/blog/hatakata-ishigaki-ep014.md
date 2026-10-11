@@ -4,7 +4,7 @@ description: "One flag. One village. Balanced by hand. No harness. No rope. Part
 pubDate: "2026-10-10T09:00:00+09:00"
 heroImage: ../../assets/oki014_hero.jpg
 heroAlt: "Hatakata ceremony at dusk during Hōnen Matsuri in Ishigaki Island — large decorated flag poles balanced by hand at the harvest festival"
-destination: ishigaki
+destination: yaeyama
 experiences: [culture]
 draft: false
 imageCredit: "Just Okinawa"
