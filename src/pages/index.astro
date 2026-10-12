@@ -5,7 +5,8 @@ import IslandMap from '../components/IslandMap.astro';
 import PostCard from '../components/PostCard.astro';
 import {experiences} from '../data/destinations';
 import {published} from '../lib/editorial';
-const posts=(await getCollection('blog')).filter(published).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const epNum=(title)=>{const m=title.match(/Ep\.(\d+)/);return m?parseInt(m[1]):0;};
+const posts=(await getCollection('blog')).filter(published).sort((a,b)=>epNum(b.data.title)-epNum(a.data.title));
 const latest=posts.slice(0,6);
 ---
 <SiteLayout title="Just Okinawa — Find your island rhythm" description="Discover Okinawa through extraordinary places and everyday moments. Explore the islands, find your kind of experience, and plan a slower journey." overlay>
