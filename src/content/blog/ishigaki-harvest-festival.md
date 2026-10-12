@@ -1,7 +1,7 @@
 ---
 title: "Ep.010 — Ishigaki Island's Harvest Festival: The Dance Most Tourists Never See"
 description: "Taiko drums. Hundreds of dancers. Every village. Every summer. This is what Ishigaki looks like when it isn't performing for tourists."
-pubDate: "2026-10-16T09:00:00+09:00"
+pubDate: "2026-10-12T09:00:00+09:00"
 heroImage: ../../assets/oki010_hero.jpg
 heroAlt: "Hōnen Matsuri harvest festival in Ishigaki Island — taiko drums and hundreds of dancers performing the traditional Yaeyama village dance"
 destination: yaeyama

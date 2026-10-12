@@ -1,7 +1,7 @@
 ---
 title: "Ep.013 — The Ridge in Okinawa Where You Can See Everything"
 description: "The ocean on one side. The island on the other. Most people never make it up here."
-pubDate: "2026-10-30T09:00:00+09:00"
+pubDate: "2026-10-12T09:00:00+09:00"
 heroImage: ../../assets/oki013_hero.jpg
 heroAlt: "Panoramic view from Asumui ridge in Okinawa — ocean stretching out on one side, green island interior on the other"
 destination: main

@@ -1,7 +1,7 @@
 ---
 title: "Ep.012 — There's a Beach in Okinawa That Nobody Goes To"
 description: "Not on any tourist map. Almost no one finds it. Not because it's hard to reach — but because nobody looks."
-pubDate: "2026-10-23T09:00:00+09:00"
+pubDate: "2026-10-12T09:00:00+09:00"
 heroImage: ../../assets/oki012_hero.jpg
 heroAlt: "Hidden beach in Okinawa with no signs and no people — crystal clear water and empty sand on a quiet stretch of coastline"
 destination: main

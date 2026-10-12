@@ -1,7 +1,7 @@
 ---
 title: "Ep.016 — BUNA SAUNA. They Turned a School Into This."
 description: "An abandoned school. Now a sauna, cafe, and hangout spot right by the sea in Okinawa."
-pubDate: "2026-10-14T09:00:00+09:00"
+pubDate: "2026-10-12T09:00:00+09:00"
 heroImage: ../../assets/oki016_hero.jpg
 heroAlt: "The hallway of a former school building, now BUNA SAUNA — a renovated sauna facility in Okinawa"
 destination: main

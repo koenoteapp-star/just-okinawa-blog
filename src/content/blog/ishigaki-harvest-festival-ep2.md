@@ -1,7 +1,7 @@
 ---
 title: "Ep.011 — Ishigaki Island's Harvest Festival: Up Close"
 description: "Since childhood. Every summer. The same ritual. For hundreds of years. This is what Ishigaki looks like when it isn't performing for tourists."
-pubDate: "2026-10-18T09:00:00+09:00"
+pubDate: "2026-10-12T09:00:00+09:00"
 heroImage: ../../assets/oki011_hero.jpg
 heroAlt: "Hōnen Matsuri harvest festival dancers in Ishigaki Island up close — traditional costumes and taiko drums at the Yaeyama community festival"
 destination: yaeyama
