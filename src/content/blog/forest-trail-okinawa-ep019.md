@@ -4,7 +4,7 @@ description: "Not a tourist spot. Not on any map. Just a coastal road through th
 pubDate: "2026-10-19T09:00:00+09:00"
 heroImage: ../../assets/oki019_hero.jpg
 heroAlt: "A quiet coastal road through Okinawa's grasslands — open sky, green hills, and the sea"
-destination: main
+destination: yaeyama
 experiences: [nature]
 draft: false
 imageCredit: "Just Okinawa"
@@ -44,7 +44,7 @@ That's how you find this.
 
 ## What's Out There
 
-The coastal road runs along the edges of Okinawa's main island — open grassland on one side, the sea stretching out on the other.
+The coastal road runs along the edge of Ishigaki Island — open grassland stretching out to the sea.
 
 There are no facilities. No parking lot with a souvenir stand. You walk, the path unfolds, and eventually you understand why people keep coming back to this island even when they think they've already seen it.
 
