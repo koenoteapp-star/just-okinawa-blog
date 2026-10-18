@@ -1,6 +1,6 @@
 ---
-title: "Ep.019 — Just a Road by the Sea. Just Okinawa."
-description: "Not a tourist spot. Not on any map. Just a coastal road through the grasslands — and one of the most beautiful things in Okinawa."
+title: "Ep.019 — Just a Road by the Sea. Just Ishigaki."
+description: "Not a tourist spot. Not on any map. Just a coastal road through the grasslands — and one of the most beautiful things in Ishigaki."
 pubDate: "2026-10-19T09:00:00+09:00"
 heroImage: ../../assets/oki019_hero.jpg
 heroAlt: "A quiet coastal road through Okinawa's grasslands — open sky, green hills, and the sea"
@@ -34,7 +34,7 @@ The grass opens wide. The path stretches out. And there's the sky above, and the
 
 ## The Thing About Okinawa
 
-The famous spots in Okinawa are worth seeing. The beaches, the markets, the castles.
+The famous spots in Ishigaki are worth seeing. The beaches, the markets, the coral reefs.
 
 But the places that stay with you are often the ones you weren't looking for.
 
@@ -54,7 +54,7 @@ They haven't.
 
 Not a destination.
 
-Just a road in Okinawa.
+Just a road in Ishigaki.
 
 Follow along on [YouTube](https://www.youtube.com/@JustOkinawaJP), [TikTok](https://www.tiktok.com/@just_okinawa), and [Instagram](https://www.instagram.com/just_okinawa).
 
