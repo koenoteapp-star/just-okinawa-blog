@@ -5,7 +5,7 @@ pubDate: "2026-11-10T09:00:00+09:00"
 heroImage: ../../assets/oki029_hero.jpg
 heroAlt: "View from the summit of Nosoko Maape in Ishigaki — sugarcane fields, coral reef and blue sea stretching to the horizon"
 destination: yaeyama
-experiences: [hiking]
+experiences: [nature]
 draft: false
 imageCredit: "Just Okinawa"
 imageSource: "https://www.youtube.com/shorts/-IFyBTBtqbQ"
